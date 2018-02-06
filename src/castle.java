@@ -66,22 +66,6 @@ public class castle {
 
         for (int j = 0; j < m; j++) {
             for (int i = n - 1; i >= 0; i--) {
-                if (neighbours[i][j][0] == 1) {
-                    int nextx = i + 1;
-                    int nexty = j;
-                    if (nextx >= 0 && nextx < n && nexty >= 0 && nexty < m && comp[i][j] != comp[nextx][nexty]) {
-                        int area = size[i][j] + size[nextx][nexty];
-                        if (area > newMaxArea) {
-                            newMaxArea = area;
-                            x1 = i + 1;
-                            y1 = j + 1;
-                            direction = 'S';
-                        }
-                    }
-                }
-
-
-
                 if (neighbours[i][j][2] == 1) {
                     int nextx = i - 1;
                     int nexty = j;
@@ -109,22 +93,6 @@ public class castle {
                         }
                     }
                 }
-
-                if (neighbours[i][j][3] == 1) {
-                    int nextx = i;
-                    int nexty = j - 1;
-                    if (nextx >= 0 && nextx < n && nexty >= 0 && nexty < m && comp[i][j] != comp[nextx][nexty]) {
-                        int area = size[i][j] + size[nextx][nexty];
-                        if (area > newMaxArea) {
-                            newMaxArea = area;
-                            x1 = i + 1;
-                            y1 = j + 1;
-                            direction = 'W';
-                        }
-                    }
-                }
-
-
             }
         }
 
