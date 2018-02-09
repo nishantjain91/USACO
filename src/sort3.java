@@ -47,7 +47,7 @@ public class sort3 {
             if(nums[i]==1)threeone++;
             if(nums[i]==2)threetwo++;
         }
-        
+
         int changes =0;
         int swaps = Math.min(onetwo ,twoone);
         changes+=swaps;
